@@ -1,6 +1,8 @@
 package com.jlabout.passin.controllers.eventController;
 
+import com.jlabout.passin.dto.attendee.AttendeeIdDTO;
 import com.jlabout.passin.dto.attendee.AttendeeListResponseDTO;
+import com.jlabout.passin.dto.attendee.AttendeeRequestDTO;
 import com.jlabout.passin.dto.event.EventIdDTO;
 import com.jlabout.passin.dto.event.EventRequestDTO;
 import com.jlabout.passin.dto.event.EventResponseDTO;
@@ -33,6 +35,14 @@ private final AttendeeService attendeeService;
     return  ResponseEntity.created(uri).body(eventIdDTO);
     }
 
+    @PostMapping("/{eventId}/attendees")
+    public ResponseEntity<AttendeeIdDTO> registerParticipant(@PathVariable String eventId, @RequestBody AttendeeRequestDTO body, UriComponentsBuilder uriComponentsBuilder){
+        AttendeeIdDTO attendeeIdDTO = this.eventService.registerAttendeeOnEvent(eventId, body);
+
+        var uri = uriComponentsBuilder.path("/attendees/{attendeId}/badge").buildAndExpand(attendeeIdDTO.attendeeId()).toUri();
+
+        return  ResponseEntity.created(uri).body(attendeeIdDTO);
+    }
 
 
     @GetMapping("/attendees/{id}")
@@ -40,5 +50,6 @@ private final AttendeeService attendeeService;
         AttendeeListResponseDTO attendeeListResponse =  this.attendeeService.getEventsAttendee(id);
         return  ResponseEntity.ok(attendeeListResponse);
     }
+
 
 }
