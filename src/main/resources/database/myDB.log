@@ -1,16 +1,8 @@
 /*C12*/SET SCHEMA PUBLIC
 SET SCHEMA "PUBLIC"
-INSERT INTO EVENTS VALUES('cbcf0ba2-7f19-4b9d-b0f1-c0e2412b7286','EventoMaxdata','Workshop maxdata','eventomaxdata',500)
+INSERT INTO EVENTS VALUES('56c8b076-1fb3-4161-a1a6-853ae88266fd','Maxdata WorkShop 3.0','Workshop maxdata 2.0','maxdata-workshop-30',9)
 COMMIT
-INSERT INTO ATTENDEES VALUES('f07bf41c-dccf-4cff-9371-cf898f39fa92','Jeferson','jefson1989@gmail.com','cbcf0ba2-7f19-4b9d-b0f1-c0e2412b7286','2024-04-09 17:15:15.894373')
-COMMIT
-INSERT INTO ATTENDEES VALUES('d99f508c-6a97-45ea-9afc-f9c4fb48a57d','Jeferson Santos','jefson22@gmail.com','cbcf0ba2-7f19-4b9d-b0f1-c0e2412b7286','2024-04-09 17:27:40.191261')
-COMMIT
-INSERT INTO ATTENDEES VALUES('781809a1-437f-42e1-9825-e954b20b89d9','Jeferson Labout','jefsonLabout@gmail.com','cbcf0ba2-7f19-4b9d-b0f1-c0e2412b7286','2024-04-09 17:31:46.101414')
-COMMIT
-INSERT INTO EVENTS VALUES('43eb1284-98a4-41fa-b3ce-03d970937813','Maxdata WorkShop 2.0','Workshop maxdata 2.0','maxdata-workshop-20',1)
-COMMIT
-INSERT INTO ATTENDEES VALUES('9728d57e-74e5-4072-bb32-951c499a8651','Jeferson Labout','jefsonLabout@gmail.com','43eb1284-98a4-41fa-b3ce-03d970937813','2024-04-09 17:34:41.996190')
+INSERT INTO ATTENDEES VALUES('668a784c-2f7d-430e-a7b1-5bb75b894724','Jeferson Santos','jefson22@gmail.com','56c8b076-1fb3-4161-a1a6-853ae88266fd','2024-04-09 22:23:41.717724')
 COMMIT
 DISCONNECT
 /*C13*/SET SCHEMA PUBLIC
